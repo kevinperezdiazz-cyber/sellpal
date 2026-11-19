@@ -1,0 +1,221 @@
+{
+  "info": {
+    "name": "SELLPAL FINAL - Spring Boot PostgreSQL",
+    "_postman_id": "sellpal-final-2026",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:8080"
+    }
+  ],
+  "item": [
+    {
+      "name": "Auth",
+      "item": [
+        {
+          "name": "Login administrador",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"admin@sellpal.co\",\n  \"password\": \"Admin2026!\"\n}"
+            },
+            "url": "{{baseUrl}}/api/auth/login"
+          }
+        },
+        {
+          "name": "Sesión actual",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/auth/me"
+          }
+        },
+        {
+          "name": "Registrar cliente",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"Tienda Demo\",\n  \"email\": \"tienda.demo@example.com\",\n  \"password\": \"Tienda2026!\",\n  \"passwordConfirm\": \"Tienda2026!\",\n  \"documento\": \"901234567\",\n  \"telefono\": \"3000000000\",\n  \"direccion\": \"Calle 10 # 20-30\",\n  \"ciudad\": \"Bogota\"\n}"
+            },
+            "url": "{{baseUrl}}/api/auth/registro"
+          }
+        },
+        {
+          "name": "Logout",
+          "request": {
+            "method": "POST",
+            "url": "{{baseUrl}}/api/auth/logout"
+          }
+        },
+        {
+          "name": "Actualizar perfil",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"Nombre actualizado\",\n  \"email\": \"admin@sellpal.co\",\n  \"telefono\": \"3000000000\",\n  \"direccion\": \"Nueva dirección\"\n}"
+            },
+            "url": "{{baseUrl}}/api/auth/perfil"
+          }
+        },
+        {
+          "name": "Cambiar contraseña",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"actual\": \"Admin2026!\",\n  \"nueva\": \"Admin2026!Nueva\",\n  \"confirmacion\": \"Admin2026!Nueva\"\n}"
+            },
+            "url": "{{baseUrl}}/api/auth/password"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Catálogos",
+      "item": [
+        {
+          "name": "Listar productos",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/productos"
+          }
+        },
+        {
+          "name": "Crear producto",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"Producto Postman\",\n  \"descripcion\": \"Registro de prueba\",\n  \"precio\": 3500,\n  \"stock\": 20,\n  \"estado\": \"ACTIVO\",\n  \"categoria\": {\"id_categoria\": 1}\n}"
+            },
+            "url": "{{baseUrl}}/api/productos"
+          }
+        },
+        {
+          "name": "Listar categorías",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/categorias"
+          }
+        },
+        {
+          "name": "Listar cargos",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/cargos"
+          }
+        },
+        {
+          "name": "Listar clientes",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/clientes"
+          }
+        },
+        {
+          "name": "Listar empleados",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/empleados"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Pedidos y operaciones",
+      "item": [
+        {
+          "name": "Crear pedido con detalles",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"cliente\": {\"documento_unico\": 2001},\n  \"empleado_registro\": {\"documento_unico\": 1002},\n  \"estado\": {\"id_estado\": 1},\n  \"detalles\": [{\"producto\": {\"id\": 1}, \"cantidad\": 2, \"precioUnitario\": 3500}]\n}"
+            },
+            "url": "{{baseUrl}}/api/pedidos"
+          }
+        },
+        {
+          "name": "Listar pedidos",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/pedidos"
+          }
+        },
+        {
+          "name": "Listar entregas",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/entregas"
+          }
+        },
+        {
+          "name": "Listar pagos",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/pagos"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Reportes",
+      "item": [
+        {
+          "name": "Resumen",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/reportes/resumen"
+          }
+        },
+        {
+          "name": "Ventas por estado",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/api/reportes/ventas-estado"
+          }
+        }
+      ]
+    }
+  ]
+}

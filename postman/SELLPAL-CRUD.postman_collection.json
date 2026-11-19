@@ -1,0 +1,1682 @@
+{
+    "info": {
+        "_postman_id": "sellpal-crud-002",
+        "name": "SELLPAL-CRUD",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Cargo",
+            "item": [
+                {
+                    "name": "Listar Cargos",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost:8080/api/cargos",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080",
+                            "path": [
+                                "api",
+                                "cargos"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Crear Cargo",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "http://localhost:8080/api/cargos",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080",
+                            "path": [
+                                "api",
+                                "cargos"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"nombre_cargo\": \"Cajero\",\n    \"descripcion\": \"Atiende caja y ventas de mostrador\"\n}"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Actualizar Cargo",
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "http://localhost:8080/api/cargos/1",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080",
+                            "path": [
+                                "api",
+                                "cargos",
+                                "1"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"nombre_cargo\": \"Gerente General\",\n    \"descripcion\": \"Actualizado desde Postman\"\n}"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Eliminar Cargo",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost:8080/api/cargos/4",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080",
+                            "path": [
+                                "api",
+                                "cargos",
+                                "4"
+                            ]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Categoria Producto",
+            "item": [
+                {
+                    "name": "Listar Categorias",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost:8080/api/categorias",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080",
+                            "path": [
+                                "api",
+                                "categorias"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Crear Categoria",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "http://localhost:8080/api/categorias",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080",
+                            "path": [
+                                "api",
+                                "categorias"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"nombre\": \"Bebidas\",\n    \"tipo\": \"Refrigerado\"\n}"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Actualizar Categoria",
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "http://localhost:8080/api/categorias/1",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080",
+                            "path": [
+                                "api",
+                                "categorias",
+                                "1"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"nombre\": \"Confiteria\",\n    \"tipo\": \"Dulce\"\n}"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Eliminar Categoria",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost:8080/api/categorias/5",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080",
+                            "path": [
+                                "api",
+                                "categorias",
+                                "5"
+                            ]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Proveedor",
+            "item": [
+                {
+                    "name": "Listar Proveedores",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost:8080/api/proveedores",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080",
+                            "path": [
+                                "api",
+                                "proveedores"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Crear Proveedor",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "http://localhost:8080/api/proveedores",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080",
+                            "path": [
+                                "api",
+                                "proveedores"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"nombre_empresa\": \"Distribuidora Central\",\n    \"contacto\": \"3011112222\"\n}"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Actualizar Proveedor",
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "http://localhost:8080/api/proveedores/1",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080",
+                            "path": [
+                                "api",
+                                "proveedores",
+                                "1"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"nombre_empresa\": \"Dulces Colombia S.A.S actualizado\",\n    \"contacto\": \"3001234567\"\n}"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Eliminar Proveedor",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost:8080/api/proveedores/3",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080",
+                            "path": [
+                                "api",
+                                "proveedores",
+                                "3"
+                            ]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Estado Pedido",
+            "item": [
+                {
+                    "name": "Listar Estados de Pedido",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost:8080/api/estados-pedido",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080",
+                            "path": [
+                                "api",
+                                "estados-pedido"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Crear Estado de Pedido",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "http://localhost:8080/api/estados-pedido",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080",
+                            "path": [
+                                "api",
+                                "estados-pedido"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"nombre_estado\": \"Cancelado\"\n}"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Actualizar Estado de Pedido",
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "http://localhost:8080/api/estados-pedido/1",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080",
+                            "path": [
+                                "api",
+                                "estados-pedido",
+                                "1"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"nombre_estado\": \"Pendiente de revision\"\n}"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Eliminar Estado de Pedido",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost:8080/api/estados-pedido/5",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080",
+                            "path": [
+                                "api",
+                                "estados-pedido",
+                                "5"
+                            ]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Producto",
+            "item": [
+                {
+                    "name": "Listar Productos",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost:8080/api/productos",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080",
+                            "path": [
+                                "api",
+                                "productos"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Obtener Producto por ID",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost:8080/api/productos/1",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080",
+                            "path": [
+                                "api",
+                                "productos",
+                                "1"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Crear Producto",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "http://localhost:8080/api/productos",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080",
+                            "path": [
+                                "api",
+                                "productos"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"nombre\": \"Galletas Saltinas\",\n    \"descripcion\": \"Galleta salada tradicional\",\n    \"precio\": 2800.0,\n    \"stock\": 120,\n    \"estado\": \"ACTIVO\",\n    \"categoria\": {\n        \"id_categoria\": 2\n    }\n}"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Actualizar Producto",
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "http://localhost:8080/api/productos/1",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080",
+                            "path": [
+                                "api",
+                                "productos",
+                                "1"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"nombre\": \"Chocoramo\",\n    \"descripcion\": \"Ponque cubierto de chocolate (actualizado)\",\n    \"precio\": 3700.0,\n    \"stock\": 95,\n    \"estado\": \"ACTIVO\",\n    \"categoria\": {\n        \"id_categoria\": 3\n    }\n}"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Eliminar Producto",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost:8080/api/productos/6",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080",
+                            "path": [
+                                "api",
+                                "productos",
+                                "6"
+                            ]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Cliente",
+            "item": [
+                {
+                    "name": "Listar Clientes",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost:8080/api/clientes",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080",
+                            "path": [
+                                "api",
+                                "clientes"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Obtener Cliente por documento",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost:8080/api/clientes/2001",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080",
+                            "path": [
+                                "api",
+                                "clientes",
+                                "2001"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Crear Cliente",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "http://localhost:8080/api/clientes",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080",
+                            "path": [
+                                "api",
+                                "clientes"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"documento_unico\": 2004,\n    \"nombre\": \"Diana Castro\",\n    \"direccion\": \"Calle 40 #5-10, Tunja\",\n    \"telefono\": \"3177777777\",\n    \"email\": \"diana.castro@mail.com\",\n    \"fecha_nacimiento\": \"1993-04-12\",\n    \"tipo_cliente\": \"Natural\",\n    \"estado_cuenta\": \"Activa\"\n}"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Actualizar Cliente",
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "http://localhost:8080/api/clientes/2001",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080",
+                            "path": [
+                                "api",
+                                "clientes",
+                                "2001"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"documento_unico\": 2001,\n    \"nombre\": \"Carlos Rodriguez actualizado\",\n    \"direccion\": \"Calle 33 #12-10, Tunja\",\n    \"telefono\": \"3144444444\",\n    \"email\": \"carlos.rodriguez@mail.com\",\n    \"fecha_nacimiento\": \"1985-11-02\",\n    \"tipo_cliente\": \"Natural\",\n    \"estado_cuenta\": \"Activa\"\n}"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Eliminar Cliente",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost:8080/api/clientes/2004",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080",
+                            "path": [
+                                "api",
+                                "clientes",
+                                "2004"
+                            ]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Empleado",
+            "item": [
+                {
+                    "name": "Listar Empleados",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost:8080/api/empleados",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080",
+                            "path": [
+                                "api",
+                                "empleados"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Obtener Empleado por documento",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost:8080/api/empleados/1001",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080",
+                            "path": [
+                                "api",
+                                "empleados",
+                                "1001"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Crear Empleado",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "http://localhost:8080/api/empleados",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080",
+                            "path": [
+                                "api",
+                                "empleados"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"documento_unico\": 1004,\n    \"nombre\": \"Paula Nino\",\n    \"direccion\": \"Cra 12 #6-30, Tunja\",\n    \"telefono\": \"3188888888\",\n    \"email\": \"paula.nino@sellpal.com\",\n    \"fecha_nacimiento\": \"1997-02-20\",\n    \"sueldo\": 1700000,\n    \"cargo\": {\n        \"id_cargo\": 2\n    }\n}"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Actualizar Empleado",
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "http://localhost:8080/api/empleados/1001",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080",
+                            "path": [
+                                "api",
+                                "empleados",
+                                "1001"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"documento_unico\": 1001,\n    \"nombre\": \"Juan Perez actualizado\",\n    \"direccion\": \"Cra 5 #10-20, Tunja\",\n    \"telefono\": \"3111111111\",\n    \"email\": \"juan.perez@sellpal.com\",\n    \"fecha_nacimiento\": \"1990-05-10\",\n    \"sueldo\": 2600000,\n    \"cargo\": {\n        \"id_cargo\": 1\n    }\n}"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Eliminar Empleado",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost:8080/api/empleados/1004",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080",
+                            "path": [
+                                "api",
+                                "empleados",
+                                "1004"
+                            ]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Pedido",
+            "item": [
+                {
+                    "name": "Listar Pedidos",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost:8080/api/pedidos",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080",
+                            "path": [
+                                "api",
+                                "pedidos"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Obtener Pedido por ID",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost:8080/api/pedidos/1",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080",
+                            "path": [
+                                "api",
+                                "pedidos",
+                                "1"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Crear Pedido con Detalles",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "http://localhost:8080/api/pedidos",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080",
+                            "path": [
+                                "api",
+                                "pedidos"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"cliente\": {\n        \"documento_unico\": 2001\n    },\n    \"empleado_registro\": {\n        \"documento_unico\": 1002\n    },\n    \"estado\": {\n        \"id_estado\": 1\n    },\n    \"detalles\": [\n        {\n            \"producto\": {\n                \"id\": 1\n            },\n            \"cantidad\": 2,\n            \"precioUnitario\": 3500.0\n        },\n        {\n            \"producto\": {\n                \"id\": 3\n            },\n            \"cantidad\": 5,\n            \"precioUnitario\": 2000.0\n        }\n    ]\n}"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Eliminar Pedido",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost:8080/api/pedidos/5",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080",
+                            "path": [
+                                "api",
+                                "pedidos",
+                                "5"
+                            ]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Detalle Pedido",
+            "item": [
+                {
+                    "name": "Listar Detalles de Pedido",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost:8080/api/detalles-pedido",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080",
+                            "path": [
+                                "api",
+                                "detalles-pedido"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Obtener Detalle por ID",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost:8080/api/detalles-pedido/1",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080",
+                            "path": [
+                                "api",
+                                "detalles-pedido",
+                                "1"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Eliminar Detalle",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost:8080/api/detalles-pedido/8",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080",
+                            "path": [
+                                "api",
+                                "detalles-pedido",
+                                "8"
+                            ]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Entrega",
+            "item": [
+                {
+                    "name": "Listar Entregas",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost:8080/api/entregas",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080",
+                            "path": [
+                                "api",
+                                "entregas"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Obtener Entrega por ID",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost:8080/api/entregas/1",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080",
+                            "path": [
+                                "api",
+                                "entregas",
+                                "1"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Crear Entrega",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "http://localhost:8080/api/entregas",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080",
+                            "path": [
+                                "api",
+                                "entregas"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"detalle\": {\n        \"id_detalle\": 2\n    },\n    \"fecha_entrega\": null,\n    \"estado\": \"PENDIENTE\",\n    \"observaciones\": \"Programada para manana\",\n    \"empleado_repartidor\": {\n        \"documento_unico\": 1003\n    }\n}"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Actualizar Entrega",
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "http://localhost:8080/api/entregas/1",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080",
+                            "path": [
+                                "api",
+                                "entregas",
+                                "1"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"detalle\": {\n        \"id_detalle\": 1\n    },\n    \"fecha_entrega\": \"2026-09-06T10:00:00\",\n    \"estado\": \"ENTREGADO\",\n    \"observaciones\": \"Entrega confirmada por el cliente\",\n    \"empleado_repartidor\": {\n        \"documento_unico\": 1003\n    }\n}"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Eliminar Entrega",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost:8080/api/entregas/5",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080",
+                            "path": [
+                                "api",
+                                "entregas",
+                                "5"
+                            ]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Pago",
+            "item": [
+                {
+                    "name": "Listar Pagos",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost:8080/api/pagos",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080",
+                            "path": [
+                                "api",
+                                "pagos"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Obtener Pago por ID",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost:8080/api/pagos/1",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080",
+                            "path": [
+                                "api",
+                                "pagos",
+                                "1"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Crear Pago",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "http://localhost:8080/api/pagos",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080",
+                            "path": [
+                                "api",
+                                "pagos"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"entrega\": {\n        \"id_entrega\": 2\n    },\n    \"metodo_pago\": \"Efectivo\",\n    \"monto\": 10000.0,\n    \"estado_pago\": \"Confirmado\"\n}"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Actualizar Pago",
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "http://localhost:8080/api/pagos/1",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080",
+                            "path": [
+                                "api",
+                                "pagos",
+                                "1"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"entrega\": {\n        \"id_entrega\": 1\n    },\n    \"metodo_pago\": \"Tarjeta\",\n    \"monto\": 10500.0,\n    \"estado_pago\": \"Confirmado\"\n}"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Eliminar Pago",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost:8080/api/pagos/5",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080",
+                            "path": [
+                                "api",
+                                "pagos",
+                                "5"
+                            ]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Categorias Mondelez",
+            "item": [
+                {
+                    "name": "Crear Categoria: Galletas & Wafers",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "http://localhost:8080/api/categorias",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080",
+                            "path": [
+                                "api",
+                                "categorias"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"nombre\": \"Galletas & Wafers\",\n    \"tipo\": \"Horneado\"\n}"
+                        }
+                    },
+                    "response": [],
+                    "event": [
+                        {
+                            "listen": "test",
+                            "script": {
+                                "type": "text/javascript",
+                                "exec": [
+                                    "const data = pm.response.json();",
+                                    "pm.collectionVariables.set('cat_galletas', data.id_categoria);",
+                                    "pm.test('Status 201 y cat_galletas guardado', function () {",
+                                    "    pm.response.to.have.status(201);",
+                                    "    pm.expect(data.id_categoria).to.not.be.undefined;",
+                                    "});"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Crear Categoria: Gomas de Mascar & Menta",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "http://localhost:8080/api/categorias",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080",
+                            "path": [
+                                "api",
+                                "categorias"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"nombre\": \"Gomas de Mascar & Menta\",\n    \"tipo\": \"Confiteria\"\n}"
+                        }
+                    },
+                    "response": [],
+                    "event": [
+                        {
+                            "listen": "test",
+                            "script": {
+                                "type": "text/javascript",
+                                "exec": [
+                                    "const data = pm.response.json();",
+                                    "pm.collectionVariables.set('cat_gomas', data.id_categoria);",
+                                    "pm.test('Status 201 y cat_gomas guardado', function () {",
+                                    "    pm.response.to.have.status(201);",
+                                    "    pm.expect(data.id_categoria).to.not.be.undefined;",
+                                    "});"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Crear Categoria: Confiteria & Caramelos",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "http://localhost:8080/api/categorias",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080",
+                            "path": [
+                                "api",
+                                "categorias"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"nombre\": \"Confiteria & Caramelos\",\n    \"tipo\": \"Dulce\"\n}"
+                        }
+                    },
+                    "response": [],
+                    "event": [
+                        {
+                            "listen": "test",
+                            "script": {
+                                "type": "text/javascript",
+                                "exec": [
+                                    "const data = pm.response.json();",
+                                    "pm.collectionVariables.set('cat_confiteria', data.id_categoria);",
+                                    "pm.test('Status 201 y cat_confiteria guardado', function () {",
+                                    "    pm.response.to.have.status(201);",
+                                    "    pm.expect(data.id_categoria).to.not.be.undefined;",
+                                    "});"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Crear Categoria: Chocolateria",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "http://localhost:8080/api/categorias",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080",
+                            "path": [
+                                "api",
+                                "categorias"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"nombre\": \"Chocolateria\",\n    \"tipo\": \"Dulce\"\n}"
+                        }
+                    },
+                    "response": [],
+                    "event": [
+                        {
+                            "listen": "test",
+                            "script": {
+                                "type": "text/javascript",
+                                "exec": [
+                                    "const data = pm.response.json();",
+                                    "pm.collectionVariables.set('cat_chocolate', data.id_categoria);",
+                                    "pm.test('Status 201 y cat_chocolate guardado', function () {",
+                                    "    pm.response.to.have.status(201);",
+                                    "    pm.expect(data.id_categoria).to.not.be.undefined;",
+                                    "});"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Productos Mondelez",
+            "item": [
+                {
+                    "name": "Crear Producto: Galletas Oreo Original",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "http://localhost:8080/api/productos",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080",
+                            "path": [
+                                "api",
+                                "productos"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"nombre\": \"PROD-ORE-01 | Galletas Oreo Original (Caja x 24 paquetes de 4 galletas)\",\n    \"descripcion\": \"Mondelez / Oreo / Caja x 24\",\n    \"precio\": 36000.0,\n    \"stock\": 145,\n    \"estado\": \"ACTIVO\",\n    \"categoria\": {\n        \"id_categoria\": {{cat_galletas}}\n    }\n}"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Crear Producto: Galletas Club Social Original",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "http://localhost:8080/api/productos",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080",
+                            "path": [
+                                "api",
+                                "productos"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"nombre\": \"PROD-CS-02 | Galletas Club Social Original (Caja Display x 36 tacos)\",\n    \"descripcion\": \"Mondelez / Club Social / Display x 36\",\n    \"precio\": 34500.0,\n    \"stock\": 8,\n    \"estado\": \"ACTIVO\",\n    \"categoria\": {\n        \"id_categoria\": {{cat_galletas}}\n    }\n}"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Crear Producto: Chicles Trident Menta Fresca",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "http://localhost:8080/api/productos",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080",
+                            "path": [
+                                "api",
+                                "productos"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"nombre\": \"PROD-TRI-03 | Chicles Trident Menta Fresca (Caja x 18 paquetes)\",\n    \"descripcion\": \"Mondelez / Trident / Caja x 18\",\n    \"precio\": 29900.0,\n    \"stock\": 82,\n    \"estado\": \"ACTIVO\",\n    \"categoria\": {\n        \"id_categoria\": {{cat_gomas}}\n    }\n}"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Crear Producto: Pastillas Halls Extra Strong Menta",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "http://localhost:8080/api/productos",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080",
+                            "path": [
+                                "api",
+                                "productos"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"nombre\": \"PROD-HAL-04 | Pastillas Halls Extra Strong Menta (Caja Display x 12 paquetes)\",\n    \"descripcion\": \"Mondelez / Halls / Caja x 12\",\n    \"precio\": 22000.0,\n    \"stock\": 210,\n    \"estado\": \"ACTIVO\",\n    \"categoria\": {\n        \"id_categoria\": {{cat_confiteria}}\n    }\n}"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Crear Producto: Galletas Chips Ahoy! Original",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "http://localhost:8080/api/productos",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080",
+                            "path": [
+                                "api",
+                                "productos"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"nombre\": \"PROD-CA-05 | Galletas Chips Ahoy! Original (Paquete x 6 unidades de 45g)\",\n    \"descripcion\": \"Mondelez / Chips Ahoy / Paquete x 6\",\n    \"precio\": 38500.0,\n    \"stock\": 55,\n    \"estado\": \"ACTIVO\",\n    \"categoria\": {\n        \"id_categoria\": {{cat_galletas}}\n    }\n}"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Crear Producto: Caramelos Masticables Sparkies",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "http://localhost:8080/api/productos",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080",
+                            "path": [
+                                "api",
+                                "productos"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"nombre\": \"PROD-SPK-06 | Caramelos Masticables Sparkies Sabores Frutales (Bolsa x 50 u)\",\n    \"descripcion\": \"Mondelez / Sparkies / Bolsa x 50\",\n    \"precio\": 16500.0,\n    \"stock\": 0,\n    \"estado\": \"ACTIVO\",\n    \"categoria\": {\n        \"id_categoria\": {{cat_confiteria}}\n    }\n}"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Crear Producto: Chocolate Milka Alpine Milk",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "http://localhost:8080/api/productos",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080",
+                            "path": [
+                                "api",
+                                "productos"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"nombre\": \"PROD-MIL-07 | Chocolate Milka Alpine Milk Tableta 90g (Display x 12 tabletas)\",\n    \"descripcion\": \"Mondelez / Milka / Display x 12\",\n    \"precio\": 58000.0,\n    \"stock\": 40,\n    \"estado\": \"ACTIVO\",\n    \"categoria\": {\n        \"id_categoria\": {{cat_chocolate}}\n    }\n}"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Crear Producto: Galletas BelVita Desayuno",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "http://localhost:8080/api/productos",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080",
+                            "path": [
+                                "api",
+                                "productos"
+                            ]
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"nombre\": \"PROD-BEL-08 | Galletas BelVita Desayuno Honey & Oats (Caja x 20 galletas)\",\n    \"descripcion\": \"Mondelez / BelVita / Caja x 20\",\n    \"precio\": 31000.0,\n    \"stock\": 6,\n    \"estado\": \"ACTIVO\",\n    \"categoria\": {\n        \"id_categoria\": {{cat_galletas}}\n    }\n}"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Listar Productos (verificar los 8 nuevos)",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost:8080/api/productos",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8080",
+                            "path": [
+                                "api",
+                                "productos"
+                            ]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        }
+    ],
+    "variable": [
+        {
+            "key": "cat_galletas",
+            "value": ""
+        },
+        {
+            "key": "cat_gomas",
+            "value": ""
+        },
+        {
+            "key": "cat_confiteria",
+            "value": ""
+        },
+        {
+            "key": "cat_chocolate",
+            "value": ""
+        }
+    ]
+}

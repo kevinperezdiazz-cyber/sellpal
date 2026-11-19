@@ -1,0 +1,9 @@
+target/
+.idea/
+.git/
+*.iml
+*.zip
+database/
+postman/
+*.md
+*.txt
